@@ -92,7 +92,7 @@ function handleSearchClick() {
         alert('Najpierw należy wpisać szukaną frazę')
     } else {
         findName(inputValue).then(data => {
-            createResultList(fakePositiveApiData);
+            createResultList(data);
         }).catch(err => {
             const message = `Error: ${err}`;
             alert(message)
